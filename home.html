@@ -10,12 +10,13 @@
 				line-height:25px;
 				background:#fff;
 				background-image:url(forestspring.jpg);
-				background-size:cover;
+				background-attachment:fixed;
+				background-size:100%;
 				/*background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);/*096 healthy water*/
 			}
 			.header{
 				position:relative;
-				margin-top:50px;
+				margin-top:70px;
 				margin-left:150px;
 				margin-right:150px;
 				border-radius:5px 5px 0px 0px;
@@ -102,6 +103,13 @@
 			a{
 				display:inline;
 				color:#0ba360;
+				-webkit-transition: all .4s ease;
+                -moz-transition: all .4s ease;
+                -o-transition: all .4s ease;
+                transition: all .4s ease;
+			}
+			a:hover{
+				opacity:0.6;
 			}
 			::-webkit-scrollbar{
                 width:10px;
@@ -118,6 +126,12 @@
                 border:2px solid #eee;
             }
 		</style>
+		<?php
+			$servername = "localhost";
+			$username = "root";
+			$password = "sdkflapos";
+			$conn = new mysqli($servername, $username, $password);
+		?>
 
 		<title></title>
 	</head>
@@ -128,6 +142,8 @@
 			<input type="search" id="myNumber" placeholder="your 5 digit zip code">
 			<button id="submit">let's go</button></div></div>
 		<div id="results"></div>
+
 	</body>
+
 	<script src="search.js"></script>
 </html>
