@@ -1,40 +1,133 @@
 <html>
 	<head> 
 		<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
 		<style type="text/css">
 			body{
 				margin:0 auto;
+				font-family:karla;
+				font-size:20px;
+				line-height:25px;
+				background:#fff;
+				background-image:url(forestspring.jpg);
+				background-size:cover;
+				/*background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);/*096 healthy water*/
 			}
 			.header{
 				position:relative;
-				margin-top:0px;
-				margin-left:0px;
-				width:100%;
-				background:#000;
-				font-family:;
+				margin-top:50px;
+				margin-left:150px;
+				margin-right:150px;
+				border-radius:5px 5px 0px 0px;
+				border-bottom:1px dashed #ccc;
+				/*background:#96e6a1; /*011 dusty grass*/
+				font-family:GT Walsheim Pro Trial Medium;
+				color:#0ba360;
+				font-size:120px;
+				line-height:130px;
+				background:#fff;
+				padding:7px;
+				/*border:1px solid #fff;
+				box-shadow:7px 7px 0px #96e6a1, 7px -7px 0px #96e6a1, -7px 7px 0px #96e6a1, -7px -7px 0px #96e6a1;*/
+				text-align:center;
+			}
+			.lowkey{
+				font-size:26px;
 			}
 			.search {
 				position:relative;
-				margin-top:10px;
-				margin-left:0px;
-				width:100%;
-				background:#000;
-				font-family:;
+				margin-top:0px;
+				text-align:center;
+				margin-left:150px;
+				border-radius:0px 0px 5px 5px;
+				margin-right:150px;
+				height:auto;
+				background:#fff;
+				/*background:#96e6a1; /*011 dusty grass*/
+				/*border:1px solid #fff;
+				box-shadow:7px 7px 0px #96e6a1, 7px -7px 0px #96e6a1, -7px 7px 0px #96e6a1, -7px -7px 0px #96e6a1;*/
+				font-family:GT Walsheim Pro Trial Medium;
+				color:#555;
+				font-size:30px;
+				line-height:36px;
+				padding:20px;
 			}
-			.results {
+			button{
+				padding:5px;
+				width:200px;
+				border:1px solid #ccc;
+				display:inline;
+				background:#fff;
+				border-radius:5px;
+				font-family:GT Walsheim Pro Trial Medium;
+				color:#0ba360;
+				font-size:30px;
+				line-height: 36px;
+			}
+			input{
+				font-family:GT Walsheim Pro Trial Medium;
+				padding:5px;
+				width:500px;
+				border-radius:5px;
+				border:1px solid #ccc;
+				margin-top:20px;
+				display:inline;
+				background:#fff;
+				color:#0ba360;
+				font-size:30px;
+				line-height:36px;
+			}
+			#results {
 				position:relative;
-				margin-top:10px;
-				margin-left:0px;
-				width:100%;
-				background:#000;
-				font-family:;
+				margin-top:50px;
+				text-align:left;
+				margin-left:150px;
+				border-radius:5px;
+				margin-right:150px;
+				height:auto;
+				background:#fff;
+				font-family:GT Walsheim Pro Trial Medium;
+				color:#555;
+				font-size:30px;
+				line-height:36px;
+				margin-bottom:50px;
 			}
+			.displayedResult{
+				padding:20px;
+			}
+			.location{
+				display:inline;
+				color:#0ba360;
+			}
+			a{
+				display:inline;
+				color:#0ba360;
+			}
+			::-webkit-scrollbar{
+                width:10px;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color:#76a8bf;
+                border-left:1px solid #eee;
+                border-right:1px solid #eee;
+                border-radius:5px;
+            }
+            ::-webkit-scrollbar-track{
+                background-color:#fff;
+                border-radius:5px;
+                border:2px solid #eee;
+            }
 		</style>
+
 		<title></title>
 	</head>
 	<body>
-		<div class="header">h</div>
-		<div class="search">h</div>
-		<div class="results">h</div>
+		<div class="header">ecoSearch <img src="BORD.png"></div>
+		<div class="search">
+			<div class="lowkey">meet ecoSearch, the all-in-one search engine and database for environmental activists, animal lovers, and more.<br>we help you get involved in events in your community, learn about environmental issues affecting your area, and find local organizations to support.</div>
+			<input type="search" id="myNumber" placeholder="your 5 digit zip code">
+			<button id="submit">let's go</button></div></div>
+		<div id="results"></div>
 	</body>
+	<script src="search.js"></script>
 </html>
